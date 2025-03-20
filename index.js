@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the Calculator Microservice!');
+});
+
+
 app.get('/add', (req, res) => {
     const num1 = parseFloat(req.query.num1);
     const num2 = parseFloat(req.query.num2);
